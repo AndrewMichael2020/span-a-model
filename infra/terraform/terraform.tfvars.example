@@ -1,0 +1,15 @@
+# Copy this to terraform.tfvars (git-ignored) and fill in your values
+
+project_id        = "your-gcp-project-id"
+region            = "us-central1"
+zone              = "us-central1-a"
+batch_bucket_name = "fmo-phi4-batch"
+model_bucket_name = "fmo-phi4-models"
+pubsub_topic_name = "phi4-job-requests"
+vm_name           = "phi4-worker"
+machine_type      = "g2-standard-8"   # 8 vCPU, 32GB RAM, 1x L4 24GB
+vm_disk_size_gb   = 100
+
+# Preferred: use a pre-quantized AWQ community model (check HuggingFace for updates)
+# If not found, startup-script.sh falls back to base model + AutoAWQ quantization
+hf_model_id = "microsoft/Phi-4-reasoning-vision-15B"

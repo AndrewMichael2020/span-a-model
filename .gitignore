@@ -205,3 +205,26 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Secrets & credentials
+service-account-key.json
+gcp-key.json
+*.credentials
+terraform.tfvars
+!terraform.tfvars.example
+
+# Terraform state
+infra/terraform/.terraform/
+infra/terraform/.terraform.lock.hcl
+infra/terraform/terraform.tfstate
+infra/terraform/terraform.tfstate.backup
+infra/terraform/*.tfplan
+
+# Local test artifacts
+scripts/test_images/
+scripts/test_output/
+scripts/__pycache__/
+
+# macOS
+.DS_Store
+**/.DS_Store

@@ -1,0 +1,2 @@
+functions-framework>=3.5
+google-cloud-compute>=1.14
