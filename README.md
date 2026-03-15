@@ -1,5 +1,29 @@
 # span-a-model
 
+<!-- Model & Runtime -->
+[![Model](https://img.shields.io/badge/Model-Phi--4--RV--15B%20AWQ-7B2FBE?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![vLLM](https://img.shields.io/badge/Served%20by-vLLM-FF6B35?style=flat-square&logo=lightning&logoColor=white)](https://docs.vllm.ai/)
+
+<!-- Infrastructure -->
+[![IaC](https://img.shields.io/badge/IaC-Terraform%201.6%2B-7B42BC?style=flat-square&logo=terraform&logoColor=white)](https://www.terraform.io/)
+[![Cloud](https://img.shields.io/badge/Cloud-GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)](https://cloud.google.com/)
+[![GPU](https://img.shields.io/badge/GPU-NVIDIA%20L4%2024GB-76B900?style=flat-square&logo=nvidia&logoColor=white)](https://cloud.google.com/compute/docs/gpus)
+[![VM](https://img.shields.io/badge/Compute-Spot%20VM-F4B400?style=flat-square&logo=googlecloud&logoColor=white)](https://cloud.google.com/compute/docs/instances/spot)
+
+<!-- Cost & Privacy -->
+[![Idle Cost](https://img.shields.io/badge/Idle%20Cost-%240%2Fhr-228B22?style=flat-square&logo=cashapp&logoColor=white)](#cost-model)
+[![Privacy](https://img.shields.io/badge/Privacy-Originals%20Never%20Leave%20Disk-FF8C00?style=flat-square&logo=lock&logoColor=white)](#security-notes)
+[![Self-Hosted](https://img.shields.io/badge/Self--Hosted-No%20Vendor%20Lock--in-6B7280?style=flat-square&logo=selfhosted&logoColor=white)](#architecture)
+
+<!-- Engineering Practices -->
+[![Tests](https://img.shields.io/badge/Tests-12%2F12%20Passing-2EA44F?style=flat-square&logo=pytest&logoColor=white)](scripts/test_local.py)
+[![Preemption Safe](https://img.shields.io/badge/Spot%20Preemption-Checkpoint%20%26%20Resume-0EA5E9?style=flat-square&logo=checkmarx&logoColor=white)](#spot-vm-preemption)
+[![Idempotent](https://img.shields.io/badge/Dispatcher-Idempotent-8B5CF6?style=flat-square&logo=apacheairflow&logoColor=white)](#architecture)
+[![Least Privilege](https://img.shields.io/badge/IAM-Least%20Privilege-DC2626?style=flat-square&logo=googlecloud&logoColor=white)](#security-notes)
+
+---
+
 **Phi-4-Reasoning-Vision-15B self-hosted batch inference on GCP — zero idle cost.**
 
 Spins up a spot L4 GPU VM on demand, processes a folder of images through the
